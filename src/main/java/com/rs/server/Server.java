@@ -39,9 +39,10 @@ public class Server {
     private static Log logger = LogFactory.getLog(Server.class);
 
     public static void main(String[] args) throws Exception {
-
         ConfigurableApplicationContext context = SpringApplication.run(Server.class);
+
         ReputationSystemTest reputationSystemTest = new ReputationSystemTest(context);
+        //运行reputation SYSTEM
         reputationSystemTest.run();
     }
 
@@ -74,7 +75,7 @@ public class Server {
         dataSource.setDriverClassName("org.postgresql.Driver"); //
         dataSource.setUsername("seven");
         dataSource.setPassword("seven");
-        dataSource.setUrl("jdbc:postgresql://127.0.0.1:5432/test?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8"); //
+        dataSource.setUrl("jdbc:postgresql://127.0.0.1:5432/test_final?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8"); //
         //dataSource.setUrl("jdbc:postgresql://127.0.0.1:5432/postgres?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8"); //
         return dataSource;
     }

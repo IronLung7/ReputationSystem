@@ -1,9 +1,6 @@
 package com.rs.data.repository;
 
-import com.rs.data.entity.Item;
-import com.rs.data.entity.ItemTopic;
-import com.rs.data.entity.User;
-import com.rs.data.entity.UserTopic;
+import com.rs.data.entity.*;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
@@ -17,4 +14,6 @@ public interface UserTopicRepository extends CrudRepository<UserTopic, Long> {
     UserTopic findById(Long id);
 
     List<UserTopic> findByUser(User user);
+
+    List<UserTopic> findByUserAndTopic(User user,Topic topic);
 }

@@ -18,4 +18,6 @@ public interface RatingRepository extends CrudRepository<Rating, Long> {
     List<Rating> findByItem(Item item);
 
     List<Rating> findByUser(User user);
+
+    List<Rating> findByItemAndScore(Item item,float score);
 }

@@ -2,6 +2,7 @@ package com.rs.data.repository;
 
 import com.rs.data.entity.Item;
 import com.rs.data.entity.ItemTopic;
+import com.rs.data.entity.Topic;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
@@ -15,4 +16,6 @@ public interface ItemTopicRepository extends CrudRepository<ItemTopic, Long> {
     ItemTopic findById(Long id);
 
     List<ItemTopic> findByItem(Item item);
+
+    List<ItemTopic> findByItemAndTopic(Item item,Topic topic);
 }

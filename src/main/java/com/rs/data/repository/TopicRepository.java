@@ -13,4 +13,5 @@ public interface TopicRepository extends CrudRepository<Topic, Long> {
     List<Topic> findAll();
 
     Topic findById(Long id);
+    Topic findByName(String name);
 }
